@@ -1,0 +1,2 @@
+class FormattedItem < ApplicationRecord
+end

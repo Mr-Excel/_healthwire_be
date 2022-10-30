@@ -1,0 +1,2 @@
+class CustomPractice < ApplicationRecord
+end

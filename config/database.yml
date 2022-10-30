@@ -1,0 +1,25 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: local
+  password: 11221122
+  # host: master.cgkh0pslnvyv.us-east-1.rds.amazonaws.com
+  host: localhost
+  port: 5432
+
+development:
+  <<: *default
+  database: sso_be_development
+
+test:
+  <<: *default
+  database: sso_be_test
+
+production:
+  <<: *default
+  username: ahmadraza
+  password: 2050Mughal
+  host: master.cgkh0pslnvyv.us-east-1.rds.amazonaws.com
+  database: sso_be_production
+  # url: <%= ENV['DATABASE_URL'] %>

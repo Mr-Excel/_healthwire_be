@@ -49,7 +49,7 @@ class Api::V1::ItemsController < ApplicationController
 
     def practices
         begin
-            @respo = CustomPractice.all
+            @respo = ActiveRecord::Base.connection.execute("select * from custom_practices")
             render_json(200, @respo.count.to_s+" record/s found!",@respo)
         rescue => e
             @error = e.message

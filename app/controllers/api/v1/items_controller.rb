@@ -168,7 +168,7 @@ class Api::V1::ItemsController < ApplicationController
                     @response = manipulate(data,1)
                     @filter = @response.select { |row| row["item_name"] != '' }
                     @inserted = DefaultItem.insert_all(@filter)
-                    render_json(200, @inserted.size.to_s+" record/s found!",@inserted)
+                    render_json(200, @inserted.length.to_s+" record/s found!",@inserted)
                     # @respo = {inserted_objects: @filter.count, response: @filter}
                 end
             else

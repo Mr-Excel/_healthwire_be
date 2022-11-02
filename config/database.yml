@@ -2,10 +2,13 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: 5
-  username: local
-  password: 11221122
-  # host: master.cgkh0pslnvyv.us-east-1.rds.amazonaws.com
-  host: localhost
+
+  username: ahmadraza
+  password: 2050Mughal
+  host: master.cgkh0pslnvyv.us-east-1.rds.amazonaws.com
+  # username: local
+  # password: 11221122
+  # host: localhost
   port: 5432
 
 development:

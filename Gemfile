@@ -6,6 +6,7 @@ ruby "3.0.0"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4"
 
+gem "figaro"
 # Use Json Web Token (JWT) for token based authentication
 gem 'jwt', '~> 1.5.6'
 # Use ActiveModel has_secure_password

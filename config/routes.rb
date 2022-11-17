@@ -4,13 +4,15 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :users 
+      resources :practices 
       resources :items 
     end
   end
 
+
   get '/api/v1/items/mapped/:practice_id' , to: 'api/v1/items#mapped_items'
   post '/api/v1/items/mapped/all', to: 'api/v1/items#create_map_items'
-  get '/api/v1/items/practices/all' , to: 'api/v1/items#practices'
+  # get '/api/v1/items/practices/all' , to: 'api/v1/items#practices'
   post '/api/v1/items/:type', to: 'api/v1/items#create'
   get '/api/v1/items/:practice_id', to: 'api/v1/items#index'
   get '/api/v1/items/full/:practice_id', to: 'api/v1/items#fullMatch'
@@ -19,6 +21,7 @@ Rails.application.routes.draw do
   get '/api/v1/items/remaining/:practice_id', to: 'api/v1/items#remaining'
 
   
+
   
   
 
